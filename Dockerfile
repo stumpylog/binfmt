@@ -162,7 +162,7 @@ COPY --from=binaries / /usr/bin
 COPY --from=alpine-crossarch /crossarch /crossarch/
 RUN ./run.sh
 
-# image builds binfmt installation image 
+# image builds binfmt installation image
 FROM scratch AS image
 COPY --from=binaries / /usr/bin/
 COPY --from=binfmt /go/bin/binfmt /usr/bin/binfmt
