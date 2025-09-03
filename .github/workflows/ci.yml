@@ -182,7 +182,7 @@ jobs:
       -
         name: Set up QEMU
         run: |
-          docker run --privileged --rm ${{ env.REPO_SLUG }} --uninstall qemu-*
+          docker run --privileged --rm ${{ env.REPO_SLUG }}:test --uninstall qemu-*
           docker run --rm --privileged ${{ env.REPO_SLUG }}:test --install all
       -
         name: Set up Docker Buildx
